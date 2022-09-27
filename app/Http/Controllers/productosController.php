@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Product;
+
 class productosController extends Controller
 {
 
@@ -12,8 +14,10 @@ class productosController extends Controller
 
         $page = "index";
 
+        $products = Product::all();
 
-        return view('Tienda.index', ["page" => $page]);
+
+        return view('Tienda.index', ["page" => $page, "products" => $products]);
     }
 
 
@@ -27,10 +31,9 @@ class productosController extends Controller
     }
 
 
+
+
     public function store()
     {
-
-
-        return "creado p";
     }
 }

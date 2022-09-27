@@ -28,17 +28,31 @@
         </tr>
     </thead>
     <tbody>
+
+        @foreach($products as $product)
+
+
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">{{ $product->id }}</th>
+            <td>{{ $product->nombre }}</td>
+            <td>{{ $product->descripcion }}</td>
+            <td>{{$product->precio_unidad }}</td>
             <td>
                 <a name="" id="" class="btn btn-primary" href="#" role="button">Actualizar</a>
                 <a name="" id="" class="btn btn-danger" href="#" role="button">Eliminar</a>
             </td>
 
         </tr>
+
+
+
+
+        @endforeach
+
+
+
+
+
 
     </tbody>
 </table>
