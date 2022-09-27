@@ -25,4 +25,12 @@ class productosController extends Controller
 
         return view('Tienda.create', ["page" => $page]);
     }
+
+
+    public function store()
+    {
+
+
+        return "creado p";
+    }
 }
