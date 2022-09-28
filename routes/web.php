@@ -9,4 +9,10 @@ use App\Http\Controllers\productosController;
 Route::redirect('/','/producto');
 
 
-Route::resource('/producto', productosController::class);
+
+Route::middleware('verifiedProducts')->resource('/producto', productosController::class);
+
+
+
+
+
