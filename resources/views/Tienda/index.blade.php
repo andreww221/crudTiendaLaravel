@@ -42,11 +42,6 @@
 
 
 
-
-
-
-
-
 <h3 class="my-5">Productos</h3>
 
 
@@ -83,18 +78,13 @@
             <td>
 
 
-                <div class="d-flex flex-row justify-content-between" >
+                <div class="d-flex flex-row ">
                     <div>
-                        <a name="" id="" class="btn btn-primary" href="{{ route('producto.edit',['producto'=> $product->id ])  }}" role="button">Actualizar</a>
+                        <a name="" id="" class="btn btn-primary mx-3" href="{{ route('producto.edit',['producto'=> $product->id ])  }}" role="button">Actualizar</a>
                     </div>
                     <div>
 
-                        <form action="{{ route('producto.destroy',['producto'=> $product->id ])  }}" method="POST">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
-
-                        </form>
+                        <a name="" id="" class="btn btn-danger" href="{{ route('producto.delete',['producto'=> $product->id ])  }}" role="button">Eliminar</a>
                     </div>
                 </div>
 

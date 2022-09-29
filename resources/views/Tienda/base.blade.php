@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Tienda | {{ $page }} </title>
+    <title> Tienda | {{ $page }} </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.0-beta1 -->
@@ -18,7 +19,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #000000;">
 
-            <a class="navbar-brand px-3" href="{{ route('producto.index')}}">Tienda</a>
+            <a class="navbar-brand px-3" href="{{ route('producto.index')}}">🏪 Tienda </a>
         </nav>
 
     </header>

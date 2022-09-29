@@ -19,6 +19,7 @@
 <h3 class="text-center my-5">Actualizar Producto</h3>
 
 
+
 <form action="{{route('producto.update',['producto'=> $id ])}}" method="POST" class="w-50 mx-auto">
 
 

@@ -14,5 +14,9 @@ Route::middleware('verifiedProducts')->resource('/producto', productosController
 
 
 
+Route::get('/delete/{producto}',[productosController::class,'delete'])->name("producto.delete");
+
+
+
 
 

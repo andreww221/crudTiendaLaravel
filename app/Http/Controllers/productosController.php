@@ -53,6 +53,28 @@ class productosController extends Controller
     }
 
 
+
+
+    public function delete($id)
+    {
+
+
+        $producto = Product::find($id);
+
+
+
+        return view('Tienda.delete', [
+            "nombre" => $producto->nombre,
+            "descripcion" => $producto->descripcion,
+            "precio_unidad" => $producto->precio_unidad,
+            "id" => $id,
+            "page" => "edit"
+        ]);
+
+
+    }
+
+
     public function destroy($id, Request $request)
     {
 
@@ -61,7 +83,7 @@ class productosController extends Controller
         $product->delete();
 
 
-        $request->session()->flash('deleted', 'El producto '.$product->nombre.' fue eliminado con exito');
+        $request->session()->flash('deleted', 'El producto ' . $product->nombre . ' fue eliminado con exito');
 
 
         return redirect()->route('producto.index');
@@ -99,7 +121,7 @@ class productosController extends Controller
         ]);
 
 
-        $request->session()->flash('updated','Producto  '.$request->input('nombre').'  actualizado con exito');
+        $request->session()->flash('updated', 'Producto  ' . $request->input('nombre') . '  actualizado con exito');
 
 
         return redirect()->route('producto.index');
